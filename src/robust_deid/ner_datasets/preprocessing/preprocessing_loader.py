@@ -43,6 +43,6 @@ class PreprocessingLoader(object):
             return CoreNLPTokenizer()
         elif tokenizer == 'clinical':
             # Abbreviations - we won't split tokens that match these (e.g 18F-FDG)
-            return ClinicalSpacyTokenizer(spacy_model='en_core_sci_sm')
+            return ClinicalSpacyTokenizer(spacy_model='en_core_web_lg')
         else:
             raise ValueError('Invalid tokenizer - does not exist')
